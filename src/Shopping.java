@@ -28,7 +28,6 @@ public class Shopping {
             switch(actionNumber) {
 
                 case 1:
-                    System.out.println("Добавить товар в список");
                     System.out.println("Введите название товара: ");
                     String productName = scanner.next();
                     boolean isExistProduct = shoppingList.contains(productName); //ищу схожий элемент в массиве
@@ -37,10 +36,9 @@ public class Shopping {
                         System.out.println("Такой товар находится уже списке");
                     } else {
 
-
                         shoppingList.add(productName); //добавляю согласно имени
                         productCount++; //увеличиваю счётчик товаров
-                        System.out.println("Товар успешно добавлен!");
+                        System.out.println("Товар " + productName + " успешно добавлен!");
                     }
 
                     break;
@@ -56,14 +54,8 @@ public class Shopping {
                     break;
 
                 case 3:
-                    System.out.println("Очистить список");
-                    for (int i = 0; i < shoppingList.size(); i++) {
-
-                        shoppingList.clear();
-                        productCount = 0;
-
-
-                    }
+                   shoppingList.clear();
+                   productCount = 0;
                     System.out.println("Вы очистили список!");
                     break;
 
