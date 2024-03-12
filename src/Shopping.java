@@ -38,8 +38,8 @@ public class Shopping {
                         System.out.println("Такой находится уже");
                     } else {
 
-                        shoppingList.add(productName);
-                        productCount++;
+                        shoppingList.add(productName); //добавляю согласно имени
+                        productCount++; //увеличиваю счётчик товаров
 
                     }
 
