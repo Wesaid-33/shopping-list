@@ -9,14 +9,7 @@ public class Shopping {
         System.out.println("Вас приветствует список покупок!");
         Scanner scanner = new Scanner(System.in);
 
-        ArrayList<String> shoppingList = new ArrayList<>();
-       /* for (int i = 0; i == 0; i++) {
-            shoppingList.add(i + " "); //заполняю массив пустотой
-        }*/
-        /*String[] shoppingList = new String[8];
-        for (int i = 0; i < shoppingList.length; i++) {
-            shoppingList[i] = ""; //заполняю массив пустотой
-        }*/
+        ArrayList<String> shoppingList = new ArrayList<>(); //создаю динамический массив arrayList
         int productCount = 0;
 
 
@@ -39,9 +32,9 @@ public class Shopping {
                     System.out.println("Добавить товар в список");
                     System.out.println("Введите название товара: ");
                     String productName = scanner.next();
-                    boolean isExistProduct = shoppingList.contains(productName);
+                    boolean isExistProduct = shoppingList.contains(productName); //ищу схожий элемент в массиве
 
-                    if (isExistProduct){
+                    if (isExistProduct){ //если элемент такой же вывожу на экран и не добавляю его
                         System.out.println("Такой находится уже");
                     } else {
 
@@ -56,60 +49,16 @@ public class Shopping {
 
                     }
 
-
-
-
-                    
-                    
-                    
-                    
-                    
-                    /*
-                    if (productCount < shoppingList.length) {
-
-                        for (int i = 0; i < shoppingList.length; i++) {
-
-                            if(shoppingList[i].equals(productName)){ //сравниваю вводимое имя с именем в списке (если есть)
-                                productIsExist = true; //существует
-                            }
-
-                        }
-
-                            if (!productIsExist) { //если нету такого, то добавляю в список
-                                shoppingList[productCount] = productName;
-                                productCount++;
-                                System.out.println("Товар " + productName + " успешно добавлен в список под номером " + productCount);
-                            } else {
-                                System.out.println("Такой товар уже есть в списке");
-                            }
-
-
-                    } else {
-                        System.out.println("Отложите покупку до следующего раза.");
-                    }
-
-                    for (int i = 0; i < shoppingList.length; i++) {
-
-                        if(shoppingList[i] != "") {//ищу НЕ пустой элемент массива
-
-                            System.out.println((i + 1) + ". " + shoppingList[i]);
-                        }
-                    }
-                    */
                     break;
 
                 case 2:
-                    System.out.println("В вашем списке находится :" + productCount);
+                    System.out.println("В вашем списке находится: " + productCount + " товаров");
 
                     for (int i = 0; i < shoppingList.size(); i++) {
                         System.out.println((i + 1) + ". " + shoppingList.get(i));
 
                     }
-                   /* for (int i = 0; i < shoppingList.length; i++) {
-                        if(shoppingList[i] != "") {
-                            System.out.println((i + 1) + ". " + shoppingList[i]);
-                        }
-                    }*/
+
                     break;
 
                 case 3:
@@ -120,13 +69,8 @@ public class Shopping {
                         productCount = 0;
                         i--;
 
-
                     }
                     System.out.println("Вы очистили список!");
-                   /* for (int i = 0; i < shoppingList.length; i++) {
-                        shoppingList[i] = "";
-                    }
-                    productCount = 0;*/
                     break;
 
                 case 4:
