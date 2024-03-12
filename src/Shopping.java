@@ -23,7 +23,6 @@ public class Shopping {
             System.out.println("4. Завершить работу");
 
             int actionNumber = scanner.nextInt();
-            //boolean productIsExist = false; //переменная для отслеживания существования продукта в списке
 
 
             switch(actionNumber) {
@@ -35,18 +34,13 @@ public class Shopping {
                     boolean isExistProduct = shoppingList.contains(productName); //ищу схожий элемент в массиве
 
                     if (isExistProduct){ //если элемент такой же вывожу на экран и не добавляю его
-                        System.out.println("Такой находится уже");
+                        System.out.println("Такой товар находится уже списке");
                     } else {
+
 
                         shoppingList.add(productName); //добавляю согласно имени
                         productCount++; //увеличиваю счётчик товаров
-
-                    }
-
-                    for (int i = 0; i < shoppingList.size(); i++) {
-
-                        System.out.println((i + 1) + ". " + shoppingList.get(i));
-
+                        System.out.println("Товар успешно добавлен!");
                     }
 
                     break;
@@ -65,9 +59,9 @@ public class Shopping {
                     System.out.println("Очистить список");
                     for (int i = 0; i < shoppingList.size(); i++) {
 
-                        shoppingList.remove(i);
+                        shoppingList.clear();
                         productCount = 0;
-                        i--;
+
 
                     }
                     System.out.println("Вы очистили список!");
@@ -82,7 +76,6 @@ public class Shopping {
                     break;
 
             }
-
         }
 
     }
