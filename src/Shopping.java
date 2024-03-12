@@ -14,7 +14,7 @@ public class Shopping {
         }
         int productCount = 0;
 
-
+        System.out.println("Test");
 
        loop: while(true){
 
